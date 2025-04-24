@@ -2,8 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Articles - The Procurement Lab</title>
+  <title>Articles - ProcIQ</title>
   <link href="style.css" rel="stylesheet" />
+  <style>
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      text-align: left;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #2c2c2c;
+    }
+    .card p {
+      color: #666;
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 0.75rem;
+      color: #6c63ff;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .card a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -12,23 +39,24 @@
       <p>Explore my latest thoughts on procurement, innovation, and technology.</p>
     </div>
     <div class="section">
-      <ul>
-        <li>
-          <a href="article1.html"><strong>How Generative AI and Emerging Tech Are Disrupting the Procurement Game</strong></a><br>
-          <small>How GenAI, RPA, and other tech are transforming sourcing and supplier engagement.</small>
-        </li>
-        <li style="margin-top: 1rem;">
-          <a href="article2.html"><strong>Unlocking the Power of Supplier Innovation in Sourcing</strong></a><br>
-          <small>Why innovation through supplier collaboration is the next big sourcing strategy.</small>
-        </li>
-        <li style="margin-top: 1rem;">
-          <a href="article3.html"><strong>What is Process Mining in S2P?</strong></a><br>
-          <small>Learn how process mining unlocks real-time insights and drives smarter decisions across the S2P lifecycle.</small>
-        </li>
-      </ul>
+      <div class="card">
+        <h3>How Generative AI and Emerging Tech Are Disrupting the Procurement Game</h3>
+        <p>How GenAI, RPA, and other tech are transforming sourcing and supplier engagement.</p>
+        <a href="article1.html">Read More →</a>
+      </div>
+      <div class="card">
+        <h3>Unlocking the Power of Supplier Innovation in Sourcing</h3>
+        <p>Why innovation through supplier collaboration is the next big sourcing strategy.</p>
+        <a href="article2.html">Read More →</a>
+      </div>
+      <div class="card">
+        <h3>What is Process Mining in S2P?</h3>
+        <p>Learn how process mining unlocks real-time insights and drives smarter decisions across the S2P lifecycle.</p>
+        <a href="article3.html">Read More →</a>
+      </div>
     </div>
     <div class="section">
-      <a href="index.html" class="cta">🏠 Back to Homepage</a>
+      <a href="index.html" class="cta">Back to Homepage</a>
     </div>
   </div>
 </body>
