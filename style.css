@@ -23,10 +23,6 @@ body {
   margin: 0 auto;
 }
 
-.hero, .section, .footer {
-  text-align: center;
-}
-
 h1, h2 {
   color: #2c2c2c;
   text-align: center;
@@ -34,6 +30,12 @@ h1, h2 {
 
 .site-title {
   color: #6c63ff;
+  text-align: center;
+}
+
+.hero h1 {
+  color: #6c63ff;
+  text-align: center;
 }
 
 .cta {
@@ -140,5 +142,4 @@ button:hover {
   border-top: 1px solid #eee;
   margin-top: 2rem;
 }
-
 
