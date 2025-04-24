@@ -144,18 +144,32 @@ button:hover {
   margin-top: 2rem;
 }
 
-
-.more-content {
-  display: none;
-  margin-top: 1rem;
+/* 📦 Improved article layout */
+.article-body {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
 }
 
-.footer {
-  width: 100%;
-  text-align: center;
-  font-size: 0.85rem;
-  color: #aaa;
-  padding: 2rem 1rem 1rem;
-  border-top: 1px solid #eee;
+.article-body p {
+  line-height: 1.7;
+  font-size: 1.02rem;
+  color: #333;
+}
+
+.article-body h2 {
+  color: #6c63ff;
   margin-top: 2rem;
 }
+
+.article-body ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.article-body li {
+  margin-bottom: 0.5rem;
+}
+
