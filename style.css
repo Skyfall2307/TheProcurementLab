@@ -24,11 +24,16 @@ body {
 }
 
 .hero, .section, .footer {
-  text-align: left;
+  text-align: center;
 }
 
 h1, h2 {
   color: #2c2c2c;
+  text-align: center;
+}
+
+.site-title {
+  color: #6c63ff;
 }
 
 .cta {
@@ -41,6 +46,7 @@ h1, h2 {
   font-weight: 600;
   transition: background 0.3s ease;
   display: inline-block;
+  text-align: center;
 }
 
 .cta:hover {
@@ -63,7 +69,7 @@ input:focus, select:focus, textarea:focus {
   border-color: #6c63ff;
   outline: none;
   background-color: #fff;
-  box-shadow: 0 0 0 2px rgba(108, 99, 255, 0.2); /* subtle glow */
+  box-shadow: 0 0 0 2px rgba(108, 99, 255, 0.2);
 }
 
 textarea {
@@ -74,12 +80,14 @@ textarea {
 button {
   background: #6c63ff;
   color: white;
-  padding: 10px;
+  padding: 10px 16px;
   border: none;
   border-radius: 12px;
   font-weight: 600;
   cursor: pointer;
-  width: 100%;
+  display: block;
+  margin: 1.5rem auto 0 auto;
+  text-align: center;
   transition: background 0.3s ease;
 }
 
@@ -113,7 +121,9 @@ button:hover {
   font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;
-  margin-top: 0.75rem;
+  margin: 0.75rem auto 0 auto;
+  display: block;
+  text-align: center;
 }
 
 .more-content {
@@ -130,3 +140,5 @@ button:hover {
   border-top: 1px solid #eee;
   margin-top: 2rem;
 }
+
+
