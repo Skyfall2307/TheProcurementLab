@@ -8,10 +8,7 @@ body {
   margin: 0;
   font-family: 'DM Sans', sans-serif;
   background: linear-gradient(135deg, #f9f9f9, #eef3fc);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
+  display: block;
   padding: 2rem;
   font-size: 0.95rem;
 }
@@ -23,10 +20,11 @@ body {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
   width: 100%;
   max-width: 820px;
+  margin: 0 auto;
 }
 
 .hero, .section, .footer {
-  text-align: center;
+  text-align: left;
 }
 
 h1, h2 {
@@ -57,6 +55,15 @@ input, select, textarea {
   border-radius: 12px;
   background-color: #fafafa;
   font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #6c63ff;
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 0 0 2px rgba(108, 99, 255, 0.2); /* subtle glow */
 }
 
 textarea {
@@ -73,6 +80,7 @@ button {
   font-weight: 600;
   cursor: pointer;
   width: 100%;
+  transition: background 0.3s ease;
 }
 
 button:hover {
