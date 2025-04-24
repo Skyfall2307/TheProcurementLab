@@ -35,7 +35,7 @@ h1, h2 {
 
 .hero h1,
 .hero p,
-.hero .cta {
+.button-group {
   text-align: center;
 }
 
@@ -128,6 +128,22 @@ button:hover {
   display: block;
   text-align: center;
 }
+
+.more-content {
+  display: none;
+  margin-top: 1rem;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #aaa;
+  padding: 2rem 1rem 1rem;
+  border-top: 1px solid #eee;
+  margin-top: 2rem;
+}
+
 
 .more-content {
   display: none;
