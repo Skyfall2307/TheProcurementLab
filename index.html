@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Procurement Lab</title>
+  <link href="style.css" rel="stylesheet" />
+  <link rel="icon" href="logo.png" type="image/png" />
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <h1>The Procurement Lab</h1>
+      <p>Transforming procurement with technology and insight</p>
+      <a href="articles.html" class="cta">Read My Articles</a>
+      <a href="#contact" class="cta">Ask Me Anything</a>
+    </div>
+
+    <div class="section about">
+      <h2>About</h2>
+      <p>I am a procurement and digital transformation leader with over 15 years of experience across SaaS platforms like Ariba, GEP, Ivalua, and Basware. I help organizations drive measurable value through Source-to-Pay (S2P) innovation and strategic technology adoption.</p>
+      <button class="toggle-btn" onclick="document.querySelector('.more-content').style.display='block'; this.style.display='none';">More About Me</button>
+      <div class="more-content">
+        <p>In my current role at OJC Consulting, I lead commercial strategy in the Nordics, managing presales and delivering procurement solutions that enhance operations and ROI. Previously, I directed global product strategy at Basware, mentoring a team of 12+ PMs and aligning our innovation roadmap with evolving client needs.</p>
+        <p>I bring hands-on expertise in deploying Ivalua, domain knowledge from GEP, and a passion for integrating GenAI and other emerging tech into procurement practices. My goal is to empower clients and teams to optimize performance and create sustainable value.</p>
+      </div>
+    </div>
+
+    <div class="section contact" id="contact">
+      <h2>Ask Me Anything</h2>
+      <form action="https://formspree.io/f/movdqrab" method="POST">
+        <label for="first-name">First Name <span class="required-star">*</span></label>
+        <input type="text" id="first-name" name="First Name" required />
+        <label for="last-name">Last Name <span class="required-star">*</span></label>
+        <input type="text" id="last-name" name="Last Name" required />
+        <label for="email">Email <span class="required-star">*</span></label>
+        <input type="email" id="email" name="Email" required />
+        <label for="company">Company <span class="required-star">*</span></label>
+        <input type="text" id="company" name="Company" required />
+        <label for="phone">Phone (optional)</label>
+        <div class="phone-group">
+          <select id="country-code" name="Country Code">
+            <option value="">Code</option>
+            <option value="+1">+1 (USA/Canada)</option>
+            <option value="+44">+44 (UK)</option>
+            <option value="+49">+49 (Germany)</option>
+            <option value="+33">+33 (France)</option>
+            <option value="+358">+358 (Finland)</option>
+            <option value="+46">+46 (Sweden)</option>
+            <option value="+47">+47 (Norway)</option>
+            <option value="+48">+48 (Poland)</option>
+            <option value="+91">+91 (India)</option>
+            <option value="+81">+81 (Japan)</option>
+            <option value="+61">+61 (Australia)</option>
+            <option value="+34">+34 (Spain)</option>
+            <option value="+39">+39 (Italy)</option>
+            <option value="+86">+86 (China)</option>
+          </select>
+          <input type="text" id="phone" name="Phone" placeholder="Phone number" />
+        </div>
+        <label for="message">Your Question <span class="required-star">*</span></label>
+        <textarea id="message" name="Message" placeholder="Type your message here..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer">
+    &copy; 2025 The Procurement Lab · <a href="https://www.linkedin.com/in/kfonteyn/" target="_blank">Connect on LinkedIn</a>
+  </div>
+</body>
+</html>
