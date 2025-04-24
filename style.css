@@ -33,8 +33,9 @@ h1, h2 {
   text-align: center;
 }
 
-.hero h1 {
-  color: #6c63ff;
+.hero h1,
+.hero p,
+.hero .cta {
   text-align: center;
 }
 
@@ -142,4 +143,3 @@ button:hover {
   border-top: 1px solid #eee;
   margin-top: 2rem;
 }
-
