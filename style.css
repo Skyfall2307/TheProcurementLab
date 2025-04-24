@@ -172,4 +172,26 @@ button:hover {
 .article-body li {
   margin-bottom: 0.5rem;
 }
-
+.section-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+  margin-bottom: 1.5rem;
+}
+.section-card h2 {
+  color: #6c63ff;
+  margin-bottom: 1rem;
+}
+.section-card p {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: #333;
+}
+.section-card ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+.section-card li {
+  margin-bottom: 0.5rem;
+}
