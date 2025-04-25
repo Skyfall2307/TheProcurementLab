@@ -195,3 +195,12 @@ button:hover {
 .section-card li {
   margin-bottom: 0.5rem;
 }
+.logo-wrapper {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.logo-img {
+  max-width: 220px;
+  height: auto;
+}
