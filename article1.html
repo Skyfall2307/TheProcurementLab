@@ -6,6 +6,12 @@
   <link href="style.css" rel="stylesheet" />
 </head>
 <body>
+  <div class="container">
+    <div class="hero">
+      <h1>How Generative AI and Emerging Tech Are Disrupting the Procurement Game</h1>
+      <p><em>10th of April 2025 • By Katarzyna Fonteyn</em></p>
+    </div>
+
     <div class="section-card">
       <p><strong>Procurement</strong>, once a back-office function focused on cost-cutting and supplier management, is undergoing a <strong>radical transformation</strong>. As we step deeper into the digital era, technologies like <strong>generative AI (Gen AI)</strong>, <strong>blockchain</strong>, <strong>robotic process automation (RPA)</strong>, and <strong>predictive analytics</strong> are reshaping how procurement operates. The disruption is happening faster than many realize.</p>
     </div>
@@ -51,48 +57,62 @@
       <a href="articles.html" class="cta">Back to Articles</a>
       <a href="index.html" class="cta">Back to Homepage</a>
     </div>
+
+    <!-- Rating Section -->
+    <div class="section-card" style="text-align: center;">
+      <h3>Rate this article</h3>
+      <div id="rating-stars" style="font-size: 2rem; color: #ccc; cursor: pointer;">
+        ★★★★★
+      </div>
+      <p id="rating-count" style="margin-top: 0.5rem; color: #6c63ff;">Total ratings: 0</p>
+    </div>
   </div>
 
   <div class="footer">
     &copy; 2025 Katarzyna Fonteyn – All rights reserved · 
     <a href="https://www.linkedin.com/in/kfonteyn/" target="_blank">Connect on LinkedIn</a>
   </div>
+
+  <!-- Rating Script -->
   <script>
-  const webAppUrl = 'https://script.google.com/macros/s/AKfycbxAwuNoclRvN89NSPak0ewlBfjWz8rrwmoIJ2ZkssNJZUIfieNKNo96ot37PjVpE2cY/exec';
-  const articleName = 'Article 1';
+    const webAppUrl = 'https://script.google.com/macros/s/AKfycbxAwuNoclRvN89NSPak0ewlBfjWz8rrwmoIJ2ZkssNJZUIfieNKNo96ot37PjVpE2cY/exec';
+    const articleName = 'Article 1';
 
-  const starContainer = document.getElementById('rating-stars');
-  const ratingText = document.getElementById('rating-count');
+    const starContainer = document.getElementById('rating-stars');
+    const ratingText = document.getElementById('rating-count');
 
-  async function fetchRatings() {
-    const res = await fetch(`${webAppUrl}?article=${encodeURIComponent(articleName)}`);
-    const data = await res.json();
-    ratingText.textContent = `Total ratings: ${data.totalRatings}`;
-  }
-
-  fetchRatings();
-
-  starContainer.addEventListener('click', async (e) => {
-    const stars = Array.from(starContainer.textContent);
-    const clickIndex = Math.floor((e.offsetX / starContainer.offsetWidth) * stars.length);
-    
-    await fetch(webAppUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: `article=${encodeURIComponent(articleName)}&rating=${clickIndex + 1}`
-    });
-
-    const coloredStars = '★'.repeat(clickIndex + 1);
-    const remainingStars = '★'.repeat(stars.length - (clickIndex + 1));
-    starContainer.innerHTML = `<span style="color: #6c63ff;">${coloredStars}</span><span style="color: #ccc;">${remainingStars}</span>`;
+    async function fetchRatings() {
+      try {
+        const res = await fetch(`${webAppUrl}?article=${encodeURIComponent(articleName)}`);
+        const data = await res.json();
+        ratingText.textContent = `Total ratings: ${data.totalRatings}`;
+      } catch (error) {
+        console.error('Error fetching ratings:', error);
+      }
+    }
 
     fetchRatings();
-  });
-</script>
-  <div class="container">
-    <div class="hero">
-      <h1>How Generative AI and Emerging Tech Are Disrupting the Procurement Game</h1>
-      <p><em>10th of April 2025 • By Katarzyna Fonteyn</em></p>
-    </div>
+
+    starContainer.addEventListener('click', async (e) => {
+      const stars = Array.from(starContainer.textContent.replace(/\s/g, ''));
+      const clickIndex = Math.floor((e.offsetX / starContainer.offsetWidth) * stars.length);
+      
+      try {
+        await fetch(webAppUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: `article=${encodeURIComponent(articleName)}&rating=${clickIndex + 1}`
+        });
+
+        const coloredStars = '★'.repeat(clickIndex + 1);
+        const remainingStars = '★'.repeat(stars.length - (clickIndex + 1));
+        starContainer.innerHTML = `<span style="color: #6c63ff;">${coloredStars}</span><span style="color: #ccc;">${remainingStars}</span>`;
+
+        fetchRatings();
+      } catch (error) {
+        console.error('Error sending rating:', error);
+      }
+    });
+  </script>
 </body>
 </html>
