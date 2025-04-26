@@ -204,3 +204,21 @@ button:hover {
   max-width: 220px;
   height: auto;
 }
+#rating-stars {
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+}
+
+#rating-stars span {
+  transition: color 0.3s;
+}
+
+#rating-stars span:hover {
+  color: #6c63ff;
+}
+
+#rating-count {
+  margin-top: 0.5rem;
+  color: #6c63ff;
+}
