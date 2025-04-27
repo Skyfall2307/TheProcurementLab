@@ -14,19 +14,25 @@
 
     <div class="section-card" style="text-align: center;">
       <p>Courses will be available soon!</p>
-      <p>We are working hard to bring you practical, hands-on learning experiences in procurement, sourcing, and digital transformation.</p>
+      <p>I am working hard to bring you practical, hands-on learning experiences in procurement, sourcing, and digital transformation.</p>
     </div>
 
     <div class="section-card">
       <h2>Suggest a Course Topic</h2>
-      <p>If you have ideas or needs for specific courses you'd like to see, please let us know!</p>
-      
-      <form action="YOUR_FORM_ENDPOINT_HERE" method="POST">
-        <label for="name">Your Name<span class="required-star">*</span></label>
+      <p>If you have ideas or needs for specific courses you'd like me to create, please let me know!</p>
+
+      <form action="https://formspree.io/f/movdqrab" method="POST">
+        <label for="name">First Name<span class="required-star">*</span></label>
         <input type="text" id="name" name="name" required>
 
-        <label for="email">Your Email<span class="required-star">*</span></label>
+        <label for="lastName">Last Name<span class="required-star">*</span></label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="email">Email<span class="required-star">*</span></label>
         <input type="email" id="email" name="email" required>
+
+        <label for="company">Company<span class="required-star">*</span></label>
+        <input type="text" id="company" name="company" required>
 
         <label for="suggestion">Course Suggestion<span class="required-star">*</span></label>
         <textarea id="suggestion" name="suggestion" required></textarea>
@@ -47,3 +53,4 @@
   </div>
 </body>
 </html>
+
