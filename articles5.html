@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Where to Find Information for 2025 about S2P</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <h1>Where to Find Information for 2025 about S2P</h1>
+      <p><em>April 27, 2025 • By Katarzyna Fonteyn</em></p>
+    </div>
+
+    <div class="section-card">
+      <p>Staying on top of Source-to-Pay (<strong>#S2P</strong>) and Accounts Payable (<strong>#AP</strong>) technology trends is more important than ever.</p>
+      <p>If you're new to procurement or starting to explore the S2P or AP SaaS provider landscape, you might be wondering where to find reliable information.  
+      I’ve been there myself, and I know how overwhelming it can feel at first. That’s why I want to share a few trusted resources that can help you navigate the market more confidently and make better-informed decisions.</p>
+      <p>Here are some key resources:</p>
+    </div>
+
+    <div class="section-card">
+      <h2>1. Gartner Magic Quadrant for Source-to-Pay Suites (2025)</h2>
+      <p>Gartner's 2025 Magic Quadrant evaluates S2P vendors based on their ability to execute and completeness of vision.</p>
+    </div>
+
+    <div class="section-card">
+      <h2>2. Gartner Magic Quadrant for Accounts Payable Invoice Automation (2025)</h2>
+      <p>In 2025, Gartner introduced a dedicated Magic Quadrant for Accounts Payable Invoice Automation (APIA) solutions, reflecting the growing importance of AP-specific tools.</p>
+    </div>
+
+    <div class="section-card">
+      <h2>3. Gartner Peer Insights: Source-to-Pay Suites</h2>
+      <p>Gartner Peer Insights offers user reviews and ratings for various S2P solutions, providing practical feedback on implementation experiences and vendor performance.</p>
+    </div>
+
+    <div class="section-card">
+      <h2>4. Ardent Partners Research: The State of Source-to-Pay Digitization 2024</h2>
+      <p>This report presents insights from 382 procurement executives worldwide, examining the current state of S2P digitization and the role of procurement leaders in driving business resilience.</p>
+    </div>
+
+    <div class="section-card">
+      <h2>5. 2025 Supplier Management Technology Advisor</h2>
+      <p>Ardent Partners' 2025 report evaluates the top supplier management solution providers, assisting procurement leaders in selecting the best-fit solutions based on their unique requirements and budgets.</p>
+    </div>
+
+    <div class="section-card">
+      <h2>6. The Hackett Group Inc. Insights: 2025 CPO Agenda: Gen AI Takes Center Stage</h2>
+      <p>The Hackett Group's 2025 agenda explores how Chief Procurement Officers are leveraging generative AI to address increasing workloads and expectations, emphasizing the transformative impact of AI on procurement functions.</p>
+    </div>
+
+    <div class="section-card">
+      <h2>7. Spend Matters SolutionMap: Spring 2025 Rankings</h2>
+      <p>Spend Matters' Spring 2025 SolutionMap provides a comprehensive ranking of over 100 procurement technology providers across 16 categories, including S2P, P2P, and supplier management.</p>
+    </div>
+
+    <div class="section">
+      <a href="articles.html" class="cta">Back to Articles</a>
+      <a href="index.html" class="cta">Back to Homepage</a>
+    </div>
+
+    <!-- Rating Section -->
+    <div class="section-card" style="text-align: center;">
+      <h3>Rate this article</h3>
+      <div id="rating-stars" style="font-size: 2rem; color: #ccc; cursor: pointer;">
+        ★★★★★
+      </div>
+      <p id="rating-count" style="margin-top: 0.5rem; color: #6c63ff;">Total ratings: 0</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Katarzyna Fonteyn – All rights reserved · 
+    <a href="https://www.linkedin.com/in/kfonteyn/" target="_blank">Connect on LinkedIn</a>
+  </div>
+
+  <!-- Rating Script -->
+  <script>
+    const webAppUrl = 'https://script.google.com/macros/s/AKfycbxAwuNoclRvN89NSPak0ewlBfjWz8rrwmoIJ2ZkssNJZUIfieNKNo96ot37PjVpE2cY/exec';
+    const articleName = 'Article 5';
+
+    const starContainer = document.getElementById('rating-stars');
+    const ratingText = document.getElementById('rating-count');
+
+    async function fetchRatings() {
+      try {
+        const res = await fetch(`${webAppUrl}?article=${encodeURIComponent(articleName)}`);
+        const data = await res.json();
+        ratingText.textContent = `Total ratings: ${data.totalRatings}`;
+      } catch (error) {
+        console.error('Error fetching ratings:', error);
+      }
+    }
+
+    fetchRatings();
+
+    starContainer.addEventListener('click', async (e) => {
+      const stars = Array.from(starContainer.textContent.replace(/\s/g, ''));
+      const clickIndex = Math.floor((e.offsetX / starContainer.offsetWidth) * stars.length);
+      
+      try {
+        await fetch(webAppUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: `article=${encodeURIComponent(articleName)}&rating=${clickIndex + 1}`
+        });
+
+        const coloredStars = '★'.repeat(clickIndex + 1);
+        const remainingStars = '★'.repeat(stars.length - (clickIndex + 1));
+        starContainer.innerHTML = `<span style="color: #6c63ff;">${coloredStars}</span><span style="color: #ccc;">${remainingStars}</span>`;
+
+        fetchRatings();
+      } catch (error) {
+        console.error('Error sending rating:', error);
+      }
+    });
+  </script>
+</body>
+</html>
