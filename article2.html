@@ -81,7 +81,7 @@
   
 <script>
   const webAppUrl = 'https://script.google.com/macros/s/AKfycbxAwuNoclRvN89NSPak0ewlBfjWz8rrwmoIJ2ZkssNJZUIfieNKNo96ot37PjVpE2cY/exec';
-  const articleName = 'Article 2'; // <- important
+  const articleName = 'Article 2'; // Important: correct article name!
 
   const starContainer = document.getElementById('rating-stars');
   const ratingText = document.getElementById('rating-count');
@@ -129,13 +129,12 @@
         body: `article=${encodeURIComponent(articleName)}&rating=${clickedStars}`
       });
 
-      fetchRatings();
+      fetchRatings(); // Refresh after voting
     } catch (error) {
       console.error('Error sending rating:', error);
     }
   });
 </script>
-
 
 </body>
 </html>
