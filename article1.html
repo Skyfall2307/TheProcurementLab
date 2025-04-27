@@ -99,18 +99,29 @@
 
   fetchRatings();
 
-  starContainer.addEventListener('click', async (e) => {
-    const rect = starContainer.getBoundingClientRect();
-    const clickX = e.clientX - rect.left;
-    const starWidth = rect.width / 5;
-    const clickedStars = Math.ceil(clickX / starWidth);
+starContainer.addEventListener('click', async (e) => {
+  const rect = starContainer.getBoundingClientRect();
+  const clickX = e.clientX - rect.left;
+  const starWidth = rect.width / 5;
+  let clickedStars = Math.floor(clickX / starWidth) + 1;
 
-    try {
-      await fetch(webAppUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: `article=${encodeURIComponent(articleName)}&rating=${clickedStars}`
-      });
+  if (clickedStars > 5) clickedStars = 5;
+  if (clickedStars < 1) clickedStars = 1;
+
+  try {
+    await fetch(webAppUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: `article=${encodeURIComponent(articleName)}&rating=${clickedStars}`
+    });
+
+    fetchRatings(); // Refresh after sending new rating
+  } catch (error) {
+    console.error('Error sending rating:', error);
+  }
+});
+
+
 
       fetchRatings(); // Refresh after sending new rating
     } catch (error) {
