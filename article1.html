@@ -73,46 +73,62 @@
     <a href="https://www.linkedin.com/in/kfonteyn/" target="_blank">Connect on LinkedIn</a>
   </div>
 
-  <!-- Rating Script -->
   <script>
-    const webAppUrl = 'https://script.google.com/macros/s/AKfycbxAwuNoclRvN89NSPak0ewlBfjWz8rrwmoIJ2ZkssNJZUIfieNKNo96ot37PjVpE2cY/exec';
-    const articleName = 'Article 1';
+  const webAppUrl = 'https://script.google.com/macros/s/AKfycbxAwuNoclRvN89NSPak0ewlBfjWz8rrwmoIJ2ZkssNJZUIfieNKNo96ot37PjVpE2cY/exec';
+  const articleName = 'Article 1'; 
 
-    const starContainer = document.getElementById('rating-stars');
-    const ratingText = document.getElementById('rating-count');
+  const starContainer = document.getElementById('rating-stars');
+  const ratingText = document.getElementById('rating-count');
 
-    async function fetchRatings() {
-      try {
-        const res = await fetch(`${webAppUrl}?article=${encodeURIComponent(articleName)}`);
-        const data = await res.json();
-        ratingText.textContent = `Total ratings: ${data.totalRatings}`;
-      } catch (error) {
-        console.error('Error fetching ratings:', error);
-      }
+  async function fetchRatings() {
+    try {
+      const res = await fetch(`${webAppUrl}?article=${encodeURIComponent(articleName)}`);
+      const data = await res.json();
+      ratingText.textContent = `Total ratings: ${data.totalRatings}`;
+      displayStars(data.averageRating);
+    } catch (error) {
+      console.error('Error fetching ratings:', error);
     }
+  }
 
-    fetchRatings();
+  function displayStars(averageRating) {
+    let fullStars = Math.floor(averageRating);
+    let halfStar = (averageRating - fullStars) >= 0.5;
+    let starsHtml = '';
 
-    starContainer.addEventListener('click', async (e) => {
-      const stars = Array.from(starContainer.textContent.replace(/\s/g, ''));
-      const clickIndex = Math.floor((e.offsetX / starContainer.offsetWidth) * stars.length);
-      
-      try {
-        await fetch(webAppUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: `article=${encodeURIComponent(articleName)}&rating=${clickIndex + 1}`
-        });
+    for (let i = 0; i < fullStars; i++) {
+      starsHtml += `<span style="color: #6c63ff;">★</span>`;
+    }
+    if (halfStar) {
+      starsHtml += `<span style="color: #6c63ff;">☆</span>`; // simulating half
+    }
+    for (let i = fullStars + (halfStar ? 1 : 0); i < 5; i++) {
+      starsHtml += `<span style="color: #ccc;">★</span>`;
+    }
+    starContainer.innerHTML = starsHtml;
+  }
 
-        const coloredStars = '★'.repeat(clickIndex + 1);
-        const remainingStars = '★'.repeat(stars.length - (clickIndex + 1));
-        starContainer.innerHTML = `<span style="color: #6c63ff;">${coloredStars}</span><span style="color: #ccc;">${remainingStars}</span>`;
+  fetchRatings();
 
-        fetchRatings();
-      } catch (error) {
-        console.error('Error sending rating:', error);
-      }
-    });
-  </script>
+  starContainer.addEventListener('click', async (e) => {
+    const rect = starContainer.getBoundingClientRect();
+    const clickX = e.clientX - rect.left;
+    const starWidth = rect.width / 5;
+    const clickedStars = Math.ceil(clickX / starWidth);
+
+    try {
+      await fetch(webAppUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: `article=${encodeURIComponent(articleName)}&rating=${clickedStars}`
+      });
+
+      fetchRatings(); // Refresh after voting
+    } catch (error) {
+      console.error('Error sending rating:', error);
+    }
+  });
+</script>
+
 </body>
 </html>
