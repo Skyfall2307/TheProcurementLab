@@ -7,50 +7,49 @@
 </head>
 <body>
   <div class="container">
-    <div class="hero"> 
+    <div class="hero">
       <h1>How Generative AI and Emerging Tech Are Disrupting the Procurement Game</h1>
       <p><em>10th of April 2025 • By Katarzyna Fonteyn</em></p>
     </div>
 
     <div class="section-card">
-      <p><strong>Procurement</strong>, once a back-office function focused on cost-cutting and supplier management, is undergoing a <strong>radical transformation</strong>. As we step deeper into the digital era, technologies like <strong>generative AI (Gen AI)</strong>, <strong>blockchain</strong>, <strong>robotic process automation (RPA)</strong>, and <strong>predictive analytics</strong> are reshaping how procurement operates. The disruption is happening faster than many realize.</p>
+      <p><strong>Procurement</strong>, once a back-office function focused on cost-cutting and supplier management, is undergoing a <strong>radical transformation</strong>. Technologies like generative AI, blockchain, robotic process automation (RPA), and predictive analytics are reshaping how procurement operates faster than ever before.</p>
     </div>
 
     <div class="section-card">
       <h2>Procurement Disruption</h2>
-      <p>Procurement has always evolved alongside technology, but recent advancements are accelerating change exponentially. Key factors contributing to this disruption include:</p>
+      <p>Procurement has always evolved alongside technology, but recent advancements are accelerating change exponentially. Key factors include:</p>
       <ul>
-        <li><strong>Global supply chain volatility:</strong> Geopolitical tensions, pandemics, and climate events are forcing procurement to be more agile and resilient.</li>
-        <li><strong>Digital transformation pressure:</strong> Companies are investing in end-to-end digital ecosystems, with procurement no longer left behind.</li>
-        <li><strong>Data:</strong> The growing availability of internal and external data has made analytics and intelligence central to decision-making.</li>
-        <li><strong>Sustainability:</strong> ESG requirements are pushing procurement teams to consider environmental and social impact in their sourcing strategies.</li>
+        <li>Global supply chain volatility</li>
+        <li>Digital transformation pressure</li>
+        <li>Explosion of available data</li>
+        <li>Sustainability and ESG requirements</li>
       </ul>
-      <p>These factors have shifted procurement’s role from <strong>transactional to strategic</strong>.</p>
+      <p>Procurement’s role has shifted from transactional to strategic.</p>
     </div>
 
     <div class="section-card">
       <h2>Generative AI</h2>
-      <p><strong>Gen AI is not just another tool.</strong> While traditional AI focused on automating rules-based tasks, Gen AI brings creativity, contextual understanding, and dynamic learning into the mix.</p>
+      <p>Unlike traditional AI, generative AI adds creativity and contextual understanding to procurement tasks:</p>
       <ul>
-        <li><strong>Automated sourcing and supplier discovery:</strong> Analyzes thousands of suppliers globally, extracts key data, and generates RFPs rapidly.</li>
-        <li><strong>Intelligent contract generation and review:</strong> Drafts contracts, flags risks, and negotiates clauses using context and history.</li>
-        <li><strong>Predictive spend analysis and forecasting:</strong> Forecasts demand, detects anomalies, and suggests proactive actions.</li>
-        <li><strong>Natural language interfaces:</strong> Tools like ChatGPT enable intuitive access to insights and data through conversation.</li>
+        <li>Automated sourcing and supplier discovery</li>
+        <li>Intelligent contract generation and review</li>
+        <li>Predictive spend analysis and forecasting</li>
+        <li>Conversational interfaces for procurement analytics</li>
       </ul>
     </div>
 
     <div class="section-card">
       <h2>Other Game-Changing Technologies</h2>
-      <p>Beyond Gen AI, several technologies are reshaping procurement:</p>
       <ul>
-        <li><strong>Blockchain:</strong> Enhances transparency and trust across global supplier networks.</li>
-        <li><strong>IoT and sensors:</strong> Offer real-time logistics and asset tracking.</li>
-        <li><strong>RPA:</strong> Frees teams from repetitive tasks like invoice entry and supplier onboarding.</li>
+        <li>Blockchain for transparency and trust</li>
+        <li>IoT for real-time inventory and logistics visibility</li>
+        <li>Robotic Process Automation (RPA) for invoice processing and supplier onboarding</li>
       </ul>
     </div>
 
     <div class="section-card">
-      <p><strong>Procurement today</strong> can be powered by AI, fueled by data, and steered by strategic thinking. <strong>Organizations that embrace AI</strong> gain a serious competitive edge — those who don’t may soon be left behind.</p>
+      <p>Procurement today is powered by AI, fueled by data, and steered by strategic thinking. Organizations that embrace the shift gain a competitive edge; those who don't risk being left behind.</p>
     </div>
 
     <div class="section">
@@ -73,62 +72,63 @@
     <a href="https://www.linkedin.com/in/kfonteyn/" target="_blank">Connect on LinkedIn</a>
   </div>
 
+  <!-- Correct Rating Script -->
   <script>
-  const webAppUrl = 'https://script.google.com/macros/s/AKfycbxAwuNoclRvN89NSPak0ewlBfjWz8rrwmoIJ2ZkssNJZUIfieNKNo96ot37PjVpE2cY/exec';
-  const articleName = 'Article 1'; 
+    const webAppUrl = 'https://script.google.com/macros/s/AKfycbxAwuNoclRvN89NSPak0ewlBfjWz8rrwmoIJ2ZkssNJZUIfieNKNo96ot37PjVpE2cY/exec';
+    const articleName = 'Article 1';
 
-  const starContainer = document.getElementById('rating-stars');
-  const ratingText = document.getElementById('rating-count');
+    const starContainer = document.getElementById('rating-stars');
+    const ratingText = document.getElementById('rating-count');
 
-  async function fetchRatings() {
-    try {
-      const res = await fetch(`${webAppUrl}?article=${encodeURIComponent(articleName)}`);
-      const data = await res.json();
-      ratingText.textContent = `Total ratings: ${data.totalRatings}`;
-      displayStars(data.averageRating);
-    } catch (error) {
-      console.error('Error fetching ratings:', error);
+    async function fetchRatings() {
+      try {
+        const res = await fetch(`${webAppUrl}?article=${encodeURIComponent(articleName)}`);
+        const data = await res.json();
+        ratingText.textContent = `Total ratings: ${data.totalRatings}`;
+        displayStars(data.averageRating);
+      } catch (error) {
+        console.error('Error fetching ratings:', error);
+      }
     }
-  }
 
-  function displayStars(averageRating) {
-    let fullStars = Math.floor(averageRating);
-    let halfStar = (averageRating - fullStars) >= 0.5;
-    let starsHtml = '';
+    function displayStars(averageRating) {
+      let fullStars = Math.floor(averageRating);
+      let halfStar = (averageRating - fullStars) >= 0.5;
+      let starsHtml = '';
 
-    for (let i = 0; i < fullStars; i++) {
-      starsHtml += `<span style="color: #6c63ff;">★</span>`;
+      for (let i = 0; i < fullStars; i++) {
+        starsHtml += `<span style="color: #6c63ff;">★</span>`;
+      }
+      if (halfStar) {
+        starsHtml += `<span style="color: #6c63ff;">☆</span>`;
+      }
+      for (let i = fullStars + (halfStar ? 1 : 0); i < 5; i++) {
+        starsHtml += `<span style="color: #ccc;">★</span>`;
+      }
+      starContainer.innerHTML = starsHtml;
     }
-    if (halfStar) {
-      starsHtml += `<span style="color: #6c63ff;">☆</span>`; // simulating half
-    }
-    for (let i = fullStars + (halfStar ? 1 : 0); i < 5; i++) {
-      starsHtml += `<span style="color: #ccc;">★</span>`;
-    }
-    starContainer.innerHTML = starsHtml;
-  }
 
-  fetchRatings();
+    fetchRatings();
 
-  starContainer.addEventListener('click', async (e) => {
-    const rect = starContainer.getBoundingClientRect();
-    const clickX = e.clientX - rect.left;
-    const starWidth = rect.width / 5;
-    const clickedStars = Math.ceil(clickX / starWidth);
+    starContainer.addEventListener('click', async (e) => {
+      const rect = starContainer.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const starWidth = rect.width / 5;
+      const clickedStars = Math.ceil(clickX / starWidth);
 
-    try {
-      await fetch(webAppUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: `article=${encodeURIComponent(articleName)}&rating=${clickedStars}`
-      });
+      try {
+        await fetch(webAppUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: `article=${encodeURIComponent(articleName)}&rating=${clickedStars}`
+        });
 
-      fetchRatings(); // Refresh after voting
-    } catch (error) {
-      console.error('Error sending rating:', error);
-    }
-  });
-</script>
-
+        fetchRatings();
+      } catch (error) {
+        console.error('Error sending rating:', error);
+      }
+    });
+  </script>
 </body>
 </html>
+
