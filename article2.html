@@ -74,14 +74,19 @@
       <a href="articles.html" class="cta">Back to Articles</a>
       <a href="index.html" class="cta">Back to Homepage</a>
     </div>
- </div> <!-- container -->
-  <div class="footer">
-    &copy; 2025 Katarzyna Fonteyn – All rights reserved · <a href="https://www.linkedin.com/in/kfonteyn/" target="_blank">Connect on LinkedIn</a>
+<!-- Rating Section -->
+<div class="section-card" style="text-align: center;">
+  <h3>Rate this article</h3>
+  <div id="rating-stars" style="font-size: 2rem; color: #ccc; cursor: pointer;">
+    ★★★★★
   </div>
-  
+  <p id="rating-count" style="margin-top: 0.5rem; color: #6c63ff;">Total ratings: 0</p>
+</div>
+
+<!-- Rating Script -->
 <script>
   const webAppUrl = 'https://script.google.com/macros/s/AKfycbxAwuNoclRvN89NSPak0ewlBfjWz8rrwmoIJ2ZkssNJZUIfieNKNo96ot37PjVpE2cY/exec';
-  const articleName = 'Article 2'; // Important: correct article name!
+  const articleName = 'Article 2'; // Important: set correctly for Article 2!
 
   const starContainer = document.getElementById('rating-stars');
   const ratingText = document.getElementById('rating-count');
@@ -129,13 +134,19 @@
         body: `article=${encodeURIComponent(articleName)}&rating=${clickedStars}`
       });
 
-      fetchRatings(); // Refresh after voting
+      fetchRatings(); // Refresh after sending new rating
     } catch (error) {
       console.error('Error sending rating:', error);
     }
   });
 </script>
 
+    
+ </div> <!-- container -->
+  <div class="footer">
+    &copy; 2025 Katarzyna Fonteyn – All rights reserved · <a href="https://www.linkedin.com/in/kfonteyn/" target="_blank">Connect on LinkedIn</a>
+  </div>
+  
 </body>
 </html>
 
