@@ -31,11 +31,10 @@
       <p class="tagline">Empowering organizations through smart procurement innovation.</p>
       <div class="hero-buttons">
         <a href="articles.html" class="cta">Read My Articles</a>
-        <a href="#contact" class="cta">Ask Me Anything</a>
       </div>
     </section>
 
-    <!-- About Me -->
+    <!-- About Me Section -->
     <section class="section-card">
       <h2>About Me</h2>
       <p>Dynamic and results-driven procurement professional with 15+ years of global experience across S2P, category management, and digital transformation.</p>
@@ -45,14 +44,14 @@
       <button onclick="toggleAbout()">Read More</button>
     </section>
 
-    <!-- Mentoring Program -->
+    <!-- Women in Procurement Mentoring Program -->
     <section class="section-card">
       <h2>Women in Procurement Mentoring Program</h2>
       <p>Launching August 2025 — supporting women in procurement careers through mentorship, collaboration, and leadership growth in Finland.</p>
       <a href="https://wipfinland2025-registration.netlify.app/" class="cta" target="_blank">Join the Program</a>
     </section>
 
-    <!-- My Courses -->
+    <!-- My Courses Section -->
     <section class="section-card">
       <h2>My Courses (Coming Soon)</h2>
       <p>Coming soon: Practical, hands-on courses in Procurement, Digital Transformation, and Strategic Sourcing. Suggest topics you would love to learn about!</p>
@@ -62,8 +61,26 @@
     <!-- Contact Section -->
     <section id="contact" class="section-card">
       <h2>Contact Me</h2>
-      <p>Questions, ideas, or collaboration opportunities? Reach out!</p>
-      <a href="https://formspree.io/f/movdqrab" class="cta" target="_blank">Ask Me Anything</a>
+      <p>If you have questions, ideas, or collaboration opportunities, feel free to reach out!</p>
+
+      <form action="https://formspree.io/f/movdqrab" method="POST">
+        <label for="firstName">First Name<span class="required-star">*</span></label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">Last Name<span class="required-star">*</span></label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="email">Email<span class="required-star">*</span></label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="company">Company<span class="required-star">*</span></label>
+        <input type="text" id="company" name="company" required>
+
+        <label for="message">Message<span class="required-star">*</span></label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
     </section>
 
   </main>
@@ -74,6 +91,7 @@
     <a href="https://www.linkedin.com/in/kfonteyn/" target="_blank">Connect on LinkedIn</a>
   </footer>
 
+  <!-- Script for About Me Toggle -->
   <script>
     function toggleAbout() {
       var moreText = document.getElementById("more-about");
@@ -87,3 +105,4 @@
 
 </body>
 </html>
+
