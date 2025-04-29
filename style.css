@@ -193,3 +193,15 @@ form button:hover {
   }
 }
 
+/* Container for navbar */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Smaller logo */
+.logo {
+  width: 40px;
+  height: auto;
+}
