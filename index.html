@@ -6,57 +6,73 @@
   <link href="style.css" rel="stylesheet" />
 </head>
 <body>
-  <div class="container">
-    
+
+  <!-- Top Navigation -->
+  <header class="navbar">
+    <div class="container">
+      <img src="iconprociq.png" alt="ProcIQ Logo" class="logo">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="mycourses.html">Courses</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
     <!-- Hero Section -->
-    <div class="hero" style="text-align: center; padding: 2rem 1rem;">
-      <img src="iconprociq.png" alt="ProcIQ Logo" style="width: 120px; margin-bottom: 1rem;">
-      <h1 style="font-size: 2rem;">Transforming Procurement with Technology and Insight</h1>
-      <div style="margin-top: 1.5rem;">
+    <section class="hero">
+      <img src="iconprociq.png" alt="ProcIQ Logo" class="hero-logo">
+      <h1>Transforming Procurement with Technology and Insight</h1>
+      <p class="tagline">Empowering organizations through smart procurement innovation.</p>
+      <div class="hero-buttons">
         <a href="articles.html" class="cta">Read My Articles</a>
         <a href="#contact" class="cta">Ask Me Anything</a>
       </div>
-    </div>
+    </section>
 
-    <!-- About Me Section -->
-    <div class="section-card">
+    <!-- About Me -->
+    <section class="section-card">
       <h2>About Me</h2>
-      <p>Dynamic and results-driven procurement and supply chain professional with 15+ years experience across procurement category management, digital transformation, and S2P technologies.</p>
-
+      <p>Dynamic and results-driven procurement professional with 15+ years of global experience across S2P, category management, and digital transformation.</p>
       <div id="more-about" style="display: none;">
-        <p>Proven expertise with GEP, Ivalua, SAP Ariba, and Salesforce. Skilled in business case development, ROI modeling, and leadership of global teams. I thrive on aligning technology with business goals to drive measurable outcomes and sustainable value in procurement transformations.</p>
+        <p>Expertise with platforms like GEP, Ivalua, SAP Ariba, and Salesforce. Skilled at driving strategic procurement transformations by combining technology and business insight.</p>
       </div>
-      <button onclick="toggleAbout()" style="margin-top: 1rem;">Read More</button>
-    </div>
+      <button onclick="toggleAbout()">Read More</button>
+    </section>
 
-    <!-- Mentoring Program Section -->
-    <div class="section-card">
+    <!-- Mentoring Program -->
+    <section class="section-card">
       <h2>Women in Procurement Mentoring Program</h2>
-      <p>I am launching a free mentoring program for Women in Procurement in Finland. Join a community focused on growth, collaboration, and leadership development. Program starts August 2025 with virtual and in-person sessions!</p>
+      <p>Launching August 2025 — supporting women in procurement careers through mentorship, collaboration, and leadership growth in Finland.</p>
       <a href="https://wipfinland2025-registration.netlify.app/" class="cta" target="_blank">Join the Program</a>
-    </div>
+    </section>
 
-    <!-- My Courses Section -->
-    <div class="section-card">
+    <!-- My Courses -->
+    <section class="section-card">
       <h2>My Courses (Coming Soon)</h2>
-      <p>Excited to announce that courses are coming soon! Practical, actionable learning experiences in Procurement, Digital Transformation, and S2P solutions.</p>
+      <p>Coming soon: Practical, hands-on courses in Procurement, Digital Transformation, and Strategic Sourcing. Suggest topics you would love to learn about!</p>
       <a href="mycourses.html" class="cta">Suggest a Course</a>
-    </div>
+    </section>
 
-    <!-- Contact Section Anchor -->
-    <div id="contact" class="section-card">
+    <!-- Contact Section -->
+    <section id="contact" class="section-card">
       <h2>Contact Me</h2>
-      <p>If you have questions, ideas, or need support in procurement transformation, feel free to reach out!</p>
+      <p>Questions, ideas, or collaboration opportunities? Reach out!</p>
       <a href="https://formspree.io/f/movdqrab" class="cta" target="_blank">Ask Me Anything</a>
-    </div>
+    </section>
 
-    <!-- Footer -->
-    <div class="footer">
-      &copy; 2025 Katarzyna Fonteyn – All rights reserved · 
-      <a href="https://www.linkedin.com/in/kfonteyn/" target="_blank">Connect on LinkedIn</a>
-    </div>
+  </main>
 
-  </div>
+  <!-- Footer -->
+  <footer class="footer">
+    &copy; 2025 Katarzyna Fonteyn – All rights reserved · 
+    <a href="https://www.linkedin.com/in/kfonteyn/" target="_blank">Connect on LinkedIn</a>
+  </footer>
 
   <script>
     function toggleAbout() {
@@ -68,6 +84,6 @@
       }
     }
   </script>
+
 </body>
 </html>
-
