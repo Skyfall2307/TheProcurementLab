@@ -9,7 +9,7 @@
 
   <!-- Top Navigation -->
   <header class="navbar">
-    <div class="container nav-container">
+    <div class="container">
       <img src="iconprociq.png" alt="ProcIQ Logo" class="logo">
       <nav>
         <ul class="nav-links">
@@ -31,29 +31,28 @@
       <p class="tagline">Empowering organizations through smart procurement innovation.</p>
       <div class="hero-buttons">
         <a href="articles.html" class="cta">Read My Articles</a>
+        <a href="#contact" class="cta">Ask Me Anything</a>
       </div>
     </section>
 
-    <!-- About Me Section -->
+    <!-- About Me -->
     <section class="section-card">
       <h2>About Me</h2>
       <p>Dynamic and results-driven procurement professional with 15+ years of global experience across S2P, category management, and digital transformation.</p>
       <div id="more-about" style="display: none;">
         <p>Expertise with platforms like GEP, Ivalua, SAP Ariba, and Salesforce. Skilled at driving strategic procurement transformations by combining technology and business insight.</p>
       </div>
-      <div style="text-align: center; margin-top: 1rem;">
-        <a href="javascript:void(0);" onclick="toggleAbout()" class="cta">Read More</a>
-      </div>
+      <button onclick="toggleAbout()">Read More</button>
     </section>
 
-    <!-- Women in Procurement Mentoring Program -->
+    <!-- Mentoring Program -->
     <section class="section-card">
       <h2>Women in Procurement Mentoring Program</h2>
       <p>Launching August 2025 — supporting women in procurement careers through mentorship, collaboration, and leadership growth in Finland.</p>
       <a href="https://wipfinland2025-registration.netlify.app/" class="cta" target="_blank">Join the Program</a>
     </section>
 
-    <!-- My Courses Section -->
+    <!-- My Courses -->
     <section class="section-card">
       <h2>My Courses (Coming Soon)</h2>
       <p>Coming soon: Practical, hands-on courses in Procurement, Digital Transformation, and Strategic Sourcing. Suggest topics you would love to learn about!</p>
@@ -93,7 +92,6 @@
     <a href="https://www.linkedin.com/in/kfonteyn/" target="_blank">Connect on LinkedIn</a>
   </footer>
 
-  <!-- Script for About Me Toggle -->
   <script>
     function toggleAbout() {
       var moreText = document.getElementById("more-about");
@@ -103,6 +101,11 @@
         moreText.style.display = "none";
       }
     }
+  </script>
+
+</body>
+</html>
+
   </script>
 
 </body>
