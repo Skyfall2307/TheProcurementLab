@@ -8,77 +8,70 @@ body {
   margin: 0;
   font-family: 'DM Sans', sans-serif;
   background: linear-gradient(135deg, #f9f9f9, #eef3fc);
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  padding: 0;
   font-size: 0.95rem;
 }
 
-/* Container */
+/* General Container */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 1rem;
 }
 
-/* Improved Navbar Card Style */
+/* Logo centered above navbar */
+.logo-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+}
+
+/* Navigation Bar */
 .navbar {
-  width: 95%;
-  margin: 1rem auto;
   background: #ffffff;
   padding: 0.8rem 2rem;
-  border-radius: 20px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  margin: 1rem auto;
+  max-width: 1100px;
   position: sticky;
   top: 10px;
   z-index: 1000;
 }
 
-.navbar .logo {
-  width: 50px;
-}
-
-.nav-links {
-  list-style: none;
+.nav-links ul {
   display: flex;
+  justify-content: flex-end;
   gap: 1.5rem;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.nav-links li a {
+.nav-links a {
   text-decoration: none;
   color: #2c2c2c;
   font-weight: 600;
-  font-size: 1rem;
   transition: color 0.3s ease;
 }
 
-.nav-links li a:hover {
+.nav-links a:hover {
   color: #6c63ff;
 }
 
 /* Hero Section */
 .hero {
   text-align: center;
-  padding: 5rem 1rem 3rem;
-  background: linear-gradient(135deg, #f9f9f9, #eef3fc);
-  border-radius: 0 0 40px 40px;
-}
-
-.hero-logo {
-  width: 120px;
-  margin-bottom: 1rem;
+  padding: 4rem 1rem 2rem;
 }
 
 .hero h1 {
-  font-size: 2.2rem;
-  margin-bottom: 0.8rem;
+  font-size: 2rem;
   color: #2c2c2c;
+  margin-bottom: 0.5rem;
 }
 
 .tagline {
@@ -87,14 +80,12 @@ body {
   margin-bottom: 2rem;
 }
 
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+/* CTA Buttons */
+.button-container {
+  text-align: center;
+  margin-top: 1rem;
 }
 
-/* CTA Buttons */
 .cta {
   background: #6c63ff;
   color: white;
@@ -102,6 +93,9 @@ body {
   border-radius: 10px;
   text-decoration: none;
   font-weight: 600;
+  display: inline-block;
+  min-width: 200px;
+  text-align: center;
   transition: background 0.3s ease;
 }
 
@@ -109,7 +103,7 @@ body {
   background: #5146d7;
 }
 
-/* Sections */
+/* Section Cards */
 .section-card {
   background: #ffffff;
   padding: 2rem;
@@ -118,7 +112,7 @@ body {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.04);
 }
 
-/* Forms inside sections */
+/* Contact Form */
 form {
   display: flex;
   flex-direction: column;
@@ -150,7 +144,6 @@ textarea:focus {
   outline: none;
 }
 
-/* Submit Button inside form */
 form button {
   background: #6c63ff;
   color: white;
@@ -177,31 +170,16 @@ form button:hover {
   margin-top: 3rem;
 }
 
-/* Small adjustments for responsiveness */
+/* Mobile Responsive Tweaks */
 @media (max-width: 768px) {
-  .nav-links {
-    gap: 1rem;
-  }
-  
-  .hero h1 {
-    font-size: 1.8rem;
+  .nav-links ul {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.8rem;
   }
 
   .cta {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
+    min-width: 100%;
   }
 }
 
-/* Container for navbar */
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Smaller logo */
-.logo {
-  width: 40px;
-  height: auto;
-}
