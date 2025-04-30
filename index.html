@@ -1,112 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>ProcIQ - Transforming Procurement with Technology and Insight</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProcIQ</title>
   <link href="style.css" rel="stylesheet" />
+  <link rel="icon" href="logo.png" type="image/png" />
 </head>
 <body>
-
-  <!-- Top Navigation -->
-  <header class="navbar">
-    <div class="container">
-      <img src="iconprociq.png" alt="ProcIQ Logo" class="logo">
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="articles.html">Articles</a></li>
-          <li><a href="mycourses.html">Courses</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-
-    <!-- Hero Section -->
-    <section class="hero">
-      <img src="iconprociq.png" alt="ProcIQ Logo" class="hero-logo">
-      <h1>Transforming Procurement with Technology and Insight</h1>
-      <p class="tagline">Empowering organizations through smart procurement innovation.</p>
-      <div class="hero-buttons">
+  <div class="container">
+    <div class="hero">
+<div class="logo-wrapper">
+  <img src="iconprociq.png" alt="ProcIQ Logo" class="logo-img" />
+</div>
+      <p>Transforming procurement with technology and insight</p>
+      <div class="button-group">
         <a href="articles.html" class="cta">Read My Articles</a>
         <a href="#contact" class="cta">Ask Me Anything</a>
+        <a href="mycourses.html" class="cta">Check My Courses</a>
+
       </div>
-    </section>
+    </div>
 
-    <!-- About Me -->
-    <section class="section-card">
-      <h2>About Me</h2>
-      <p>Dynamic and results-driven procurement professional with 15+ years of global experience across S2P, category management, and digital transformation.</p>
-      <div id="more-about" style="display: none;">
-        <p>Expertise with platforms like GEP, Ivalua, SAP Ariba, and Salesforce. Skilled at driving strategic procurement transformations by combining technology and business insight.</p>
+    <div class="section-card">
+      <h2>Welcome to ProcIQ</h2>
+      <p><strong>ProcIQ</strong> stands for <em>Procurement Intelligence Quotient</em>. It reflects a smarter, data-driven, and tech-powered approach to transforming procurement. This platform was born from over 15 years of experience in global procurement, digital transformation, and product management — helping organizations unlock strategic value through innovation.</p>
+      <p>ProcIQ brings together the worlds of sourcing, SaaS technology, GenAI, and supplier collaboration into a single destination. Here, you’ll find thought leadership, tools, and insights to help procurement professionals shift from transactional to transformational — and create measurable business impact.</p>
+    </div>
+
+    <div class="section-card about">
+      <h2>About</h2>
+     <p>Dynamic and results-driven procurement and supply chain professional with over 15 years of experience across category management, digital transformation, and advanced procurement technology deployment. I specialize in Source-to-Pay (S2P) processes, services sourcing, direct materials sourcing, and intelligent category management.</p>
+  <p>With a proven track record in leading cross-functional teams and driving global procurement transformations, I am passionate about helping organizations unlock measurable value through innovative digital solutions. My expertise spans business case development, ROI modeling, stakeholder engagement, and aligning technology with business goals to deliver cost savings, operational efficiency, and strategic insights.</p>
+    </div>
+
+    <div class="section-card">
+      <h2>Women in Procurement Mentoring Program – Finland</h2>
+      <p>This free mentoring program supports women in procurement in Finland by fostering community, growth, and mentorship. Whether you're a seasoned expert or early in your career, join us as a mentor or mentee to grow together.</p>
+      <div class="button-group">
+        <a href="https://wipfinland2025-registration.netlify.app/" target="_blank" class="cta">Join the Program</a>
       </div>
-      <button onclick="toggleAbout()">Read More</button>
-    </section>
+    </div>
 
-    <!-- Mentoring Program -->
-    <section class="section-card">
-      <h2>Women in Procurement Mentoring Program</h2>
-      <p>Launching August 2025 — supporting women in procurement careers through mentorship, collaboration, and leadership growth in Finland.</p>
-      <a href="https://wipfinland2025-registration.netlify.app/" class="cta" target="_blank">Join the Program</a>
-    </section>
-
-    <!-- My Courses -->
-    <section class="section-card">
-      <h2>My Courses (Coming Soon)</h2>
-      <p>Coming soon: Practical, hands-on courses in Procurement, Digital Transformation, and Strategic Sourcing. Suggest topics you would love to learn about!</p>
-      <a href="mycourses.html" class="cta">Suggest a Course</a>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section-card">
-      <h2>Contact Me</h2>
-      <p>If you have questions, ideas, or collaboration opportunities, feel free to reach out!</p>
-
+    <div class="section-card contact" id="contact">
+      <h2>Ask Me Anything</h2>
       <form action="https://formspree.io/f/movdqrab" method="POST">
-        <label for="firstName">First Name<span class="required-star">*</span></label>
-        <input type="text" id="firstName" name="firstName" required>
+        <label for="first-name">First Name <span class="required-star">*</span></label>
+        <input type="text" id="first-name" name="First Name" required />
 
-        <label for="lastName">Last Name<span class="required-star">*</span></label>
-        <input type="text" id="lastName" name="lastName" required>
+        <label for="last-name">Last Name <span class="required-star">*</span></label>
+        <input type="text" id="last-name" name="Last Name" required />
 
-        <label for="email">Email<span class="required-star">*</span></label>
-        <input type="email" id="email" name="email" required>
+        <label for="email">Email <span class="required-star">*</span></label>
+        <input type="email" id="email" name="Email" required />
 
-        <label for="company">Company<span class="required-star">*</span></label>
-        <input type="text" id="company" name="company" required>
+        <label for="company">Company <span class="required-star">*</span></label>
+        <input type="text" id="company" name="Company" required />
 
-        <label for="message">Message<span class="required-star">*</span></label>
-        <textarea id="message" name="message" required></textarea>
+        <label for="phone">Phone (optional)</label>
+        <div class="phone-group">
+          <select id="country-code" name="Country Code">
+            <option value="">Code</option>
+            <option value="+1">+1 (USA/Canada)</option>
+            <option value="+44">+44 (UK)</option>
+            <option value="+49">+49 (Germany)</option>
+            <option value="+33">+33 (France)</option>
+            <option value="+358">+358 (Finland)</option>
+            <option value="+46">+46 (Sweden)</option>
+            <option value="+47">+47 (Norway)</option>
+            <option value="+48">+48 (Poland)</option>
+            <option value="+91">+91 (India)</option>
+            <option value="+81">+81 (Japan)</option>
+            <option value="+61">+61 (Australia)</option>
+            <option value="+34">+34 (Spain)</option>
+            <option value="+39">+39 (Italy)</option>
+            <option value="+86">+86 (China)</option>
+          </select>
+          <input type="text" id="phone" name="Phone" placeholder="Phone number" />
+        </div>
+
+        <label for="message">Your Question <span class="required-star">*</span></label>
+        <textarea id="message" name="Message" placeholder="Type your message here..." required></textarea>
 
         <button type="submit">Submit</button>
       </form>
-    </section>
+    </div>
+  </div>
 
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
+  <div class="footer">
     &copy; 2025 Katarzyna Fonteyn – All rights reserved · 
     <a href="https://www.linkedin.com/in/kfonteyn/" target="_blank">Connect on LinkedIn</a>
-  </footer>
-
-  <script>
-    function toggleAbout() {
-      var moreText = document.getElementById("more-about");
-      if (moreText.style.display === "none") {
-        moreText.style.display = "block";
-      } else {
-        moreText.style.display = "none";
-      }
-    }
-  </script>
-
-</body>
-</html>
-
-  </script>
-
+  </div>
 </body>
 </html>
