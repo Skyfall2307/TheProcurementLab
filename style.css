@@ -8,164 +8,137 @@ body {
   margin: 0;
   font-family: 'DM Sans', sans-serif;
   background: linear-gradient(135deg, #f9f9f9, #eef3fc);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  padding: 2rem;
   font-size: 0.95rem;
-}
-
-.form-container {
-  background: #ffffff;
-  padding: 2.5rem;
-  border-radius: 20px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
-  width: 100%;
-  max-width: 520px;
-}
-
-.welcome {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-.welcome h1 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
   color: #2c2c2c;
 }
 
-.welcome h1 span {
-  color: #6c63ff;
-  font-weight: 600;
-}
-
-.welcome p {
-  font-size: 0.95rem;
-  color: #666;
-  max-width: 90%;
+.container {
+  max-width: 960px;
   margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
-/* Learn More Button (top right) */
-.learn-more-button {
-  text-align: right;
-  margin-top: -1rem;
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
   margin-bottom: 1rem;
 }
 
-.learn-more-button a {
+.logo-img {
+  width: 100px;
+  height: auto;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.cta {
   background: #6c63ff;
   color: white;
   text-decoration: none;
-  font-size: 0.85rem;
-  padding: 6px 14px;
-  border-radius: 8px;
-  font-weight: 500;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  display: inline-block;
   transition: background 0.3s ease;
+  min-width: 180px;
+  text-align: center;
 }
 
-.learn-more-button a:hover {
+.cta:hover {
   background: #5146d7;
 }
 
-/* Countdown banner */
-.countdown {
-  background: #fff3cd;
-  color: #856404;
-  border: 1px solid #ffeeba;
-  padding: 1rem;
-  border-radius: 12px;
+.section-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   margin-bottom: 2rem;
-  font-size: 0.95rem;
-  text-align: center;
-  font-weight: 500;
 }
 
-form label {
-  display: block;
+.section-card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.section-card p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  margin-bottom: 1.2rem;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
   margin-top: 1rem;
   font-weight: 500;
-  color: #333;
 }
 
 input,
-select,
-textarea {
-  width: 100%;
-  max-width: 100%;
-  padding: 10px 12px;
-  margin-top: 6px;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  font-size: 0.88rem;
+textarea,
+select {
+  padding: 0.6rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
   font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
   background-color: #fafafa;
-  transition: border-color 0.2s ease;
+  margin-top: 0.3rem;
 }
 
 input:focus,
-select:focus,
-textarea:focus {
-  border-color: #6c63ff;
+textarea:focus,
+select:focus {
   outline: none;
+  border-color: #6c63ff;
   background-color: #fff;
-}
-
-#why,
-#expectations {
-  height: 160px;
 }
 
 textarea {
   resize: vertical;
+  min-height: 120px;
 }
 
-/* GDPR checkbox styling */
-.gdpr-checkbox {
+.phone-group {
   display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-top: 1.5rem;
-  font-size: 0.85rem;
-  color: #444;
-  line-height: 1.4;
+  gap: 0.5rem;
+  align-items: center;
 }
 
-.gdpr-checkbox input[type="checkbox"] {
-  margin-top: 4px;
-  transform: scale(1.1);
-  flex-shrink: 0;
-}
-
-.gdpr-checkbox label {
-  display: inline;
-  cursor: pointer;
-}
-
-.gdpr-checkbox a {
-  color: #6c63ff;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.gdpr-checkbox a:hover {
-  text-decoration: underline;
-}
-
-/* Submit Button */
 button {
-  margin-top: 1.8rem;
-  width: 100%;
-  padding: 10px;
+  margin-top: 2rem;
   background: #6c63ff;
   color: white;
-  font-size: 0.9rem;
-  font-weight: 600;
+  padding: 0.8rem;
+  font-size: 1rem;
   border: none;
-  border-radius: 12px;
+  border-radius: 10px;
   cursor: pointer;
+  font-weight: 600;
   transition: background 0.3s ease;
 }
 
@@ -173,19 +146,16 @@ button:hover {
   background: #5146d7;
 }
 
-/* Footer */
-.footer {
-  width: 100%;
-  text-align: center;
-  font-size: 0.85rem;
-  color: #aaa;
-  padding: 2rem 1rem 1rem;
-  border-top: 1px solid #eee;
-  margin-top: 2rem;
-}
-
-/* Red asterisk for required fields */
 .required-star {
   color: red;
-  margin-left: 4px;
 }
+
+/* Footer */
+.footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #999;
+  padding: 2rem 1rem 1rem;
+  border-top: 1px solid #eee;
+}
+
